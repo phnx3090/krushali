@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* solid black background, images removed */
+  color: white;
+  font-size: 14px;
+  font-family: sans-serif;
+  overflow: auto;
+}
+a {
+  color: white;
+  font-size: 14px;
+}
+#main {
+  width: 100%;
+}
+#wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 1100px;
+  height: 680px;
+  margin-top: 10px;
+}
+#text {
+  width: 272px;
+  height: 560px;
+  left: 188px;
+  top: 80px;
+  position: absolute;
+}
+#code {
+  display: none;
+  color: rgb(196, 255, 255);
+  font-size: 16px;
+  margin-top: 70px;
+  line-height: 25px;
+  font-size: larger;
+  font-weight: bolder;
+}
+#clock-box {
+  position: absolute;
+  left: 60px;
+  top: 550px;
+  font-size: 28px;
+  display: none;
+}
+#clock-box a {
+  font-size: 28px;
+  text-decoration: none;
+}
+#clock {
+  margin-left: 48px;
+}
+#clock .digit {
+  font-size: 64px;
+}
+#canvas {
+  margin: 0 auto;
+  width: 1100px;
+  height: 680px;
+}
+#error {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 60px;
+  display: none;
+}
+.hand {
+  cursor: pointer;
+}
+.say {
+  margin-left: 5px;
+}
+.space {
+  margin-right: 150px;
+}
+
+#message-box{
+  position: absolute;
+  margin-top:450px;
+  font-size: 25px;
+  font-family: monospace;
+
+}
+
+#surprise-container {
+    margin-top: 28px; /* pushes it into your red-box zone */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+#surprise-container.show {
+    opacity: 1;
+}
+
+#surprise-btn {
+    padding: 18px 52px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 999px;
+    cursor: pointer;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    background: linear-gradient(
+        180deg,
+        rgba(255, 220, 230, 0.9),
+        rgba(255, 180, 200, 0.85)
+    );
+
+    color: #5a0f24;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35),
+        inset 0 1px 2px rgba(255,255,255,0.6);
+
+    backdrop-filter: blur(6px);
+}
+
+#surprise-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Confetti container */
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Individual confetti piece */
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 14px;
+    opacity: 0.8;
+    animation: confetti-fall linear infinite;
+    border-radius: 2px;
+}
+
+/* Slow floating animation */
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
